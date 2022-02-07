@@ -1,0 +1,159 @@
+Finalice la calculadora con Bootstrap.
+
+Code html;
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora con Boostrap y JavaScript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">       
+</head>
+<body>
+<!-- <header>
+    <h1 class="display-2">Calculadora Basica</h1>
+</header>
+<div class="wrap">
+<form class="row g-2 justify-content-center">
+  <div class="col-auto">
+    <input type="number" class="form-control" id="n1" placeholder="Primer Valor">
+  </div>
+  <div class="col-auto">
+    <input type="number" class="form-control" id="n2" placeholder="Segundo Valor">
+  </div>
+  <div class="col-auto">
+    <input type="number" class="form-control" id="result" placeholder="Resultado">
+  </div>
+</form>
+<div class="row g-2 justify-content-center">
+    <div class="col-auto">
+        <button type="" class="btn_calc btn-info mb-12" id="btn_suma">
+            <p class="h1">+</p>
+        </button>
+    </div>
+    <div class="col-auto">
+        <button type="" class="btn_calc btn-success mb-12" id="btn_resta">
+            <p class="h1">-</p>
+        </button>
+    </div>
+    <div class="col-auto">
+        <button type="" class="btn_calc btn-danger mb-12" id="btn_multiplicacion">
+            <p class="h1">*</p>
+        </button>
+    </div>
+    <div class="col-auto">
+        <button type="" class="btn_calc btn-warning mb-12" id="btn_division">
+            <p class="h1">/</p>
+        </button>
+    </div>
+  </div>
+  <div class="d-grid gap-2">
+        <button type="" class="btn_borrar mb-12" style="background-color: magenta;" id="btn_borrar">
+            <p class="h1">Borrar</p>
+        </button>
+    </div>
+</div>
+ -->
+<script src="app/app.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+</body>
+</html>
+
+Code JavaScript;
+
+
+// CALCULADORA UTILIZANDO LOS PROMPT
+
+// var a = parseInt(prompt("Ingrese el primer numero"));
+// var b = parseInt(prompt("Ingrese el segundo numero"));
+
+// var opcion = parseInt(prompt("1- Suma \n 2- Resta \n 3- Multiplicacion \n 4- Division"));
+
+// switch(opcion){
+// 	case 1: alert( a + b);
+// 		break;
+// 	case 2: alert( a - b);
+// 		break;
+// 	case 3: alert( a * b);
+// 		break;
+// 	case 4: alert( a / b);
+// 		break;
+// 	default:
+// 		alert("Esta opcion no esta registrada");
+// 		break;
+// }
+
+// CALCULADORA CON BOOtStRAP 
+// var n1 = document.getElementById("n1");
+// var n2 = document.getElementById("n2");
+// var r = document.getElementById("result");
+
+// r.disabled = true;
+
+// document.getElementById('btn_suma').addEventListener('click', 
+// 	() => {
+
+// 	if (n1.value=="" || n2.value=="") {
+// 		alert("Ingrese los valores antes de realizar una operacion");
+// 	}else{
+// 		var Suma = parseInt(n1.value) + parseInt(n2.value);
+// 	    r.value = Suma;
+// 	}
+
+// });
+
+// document.getElementById('btn_resta').addEventListener('click', 
+// 	() => {
+    
+//     if (n1.value=="" || n2.value=="") {
+// 		alert("Ingrese los valores antes de realizar una operacion");
+// 	}else{
+// 	    var Resta = parseInt(n1.value) - parseInt(n2.value);
+// 	    r.value = Resta;
+// 	}
+// });
+
+// document.getElementById('btn_multiplicacion').addEventListener('click', 
+// 	() => {
+    
+//     if (n1.value=="" || n2.value=="") {
+// 		alert("Ingrese los valores antes de realizar una operacion");
+// 	}else{
+// 	    var Multiplicacion = parseInt(n1.value) * parseInt(n2.value);
+// 	    r.value = Multiplicacion;
+// 	}
+// });
+
+// document.getElementById('btn_division').addEventListener('click', 
+// 	() => {
+
+//   if (n1.value=="" || n2.value=="") {
+// 		alert("Ingrese los valores antes de realizar una operacion");
+// 	} 
+// 	else {
+// 	    if (n2.value == "0") {
+// 		   alert("No se puede dividir entre cero");
+// 	    } 
+// 	    else {
+// 		   var Division = parseInt(n1.value) / parseInt(n2.value);
+// 	       r.value = Division;
+// 	    }
+// 	}
+	
+// });
+
+// document.getElementById('btn_borrar').addEventListener('click', 
+// 	() => {
+
+//     if (n1.value=="" && n2.value=="") {
+// 		alert("Los campos estan vacios, introduzca los valores");
+// 	}else{
+// 	    n1.value = null;
+// 	    n2.value= null;
+// 	    r.value = null;
+// 	}
+// });
